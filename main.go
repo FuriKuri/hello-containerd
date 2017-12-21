@@ -9,12 +9,12 @@ import (
 )
 
 func main() {
-	if err := redisExample(); err != nil {
+	if err := pullImage(); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func redisExample() error {
+func pullImage() error {
 	client, err := containerd.New("/run/containerd/containerd.sock")
 	if err != nil {
 		return err
